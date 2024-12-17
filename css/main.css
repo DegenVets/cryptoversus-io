@@ -528,7 +528,7 @@ input[type="submit"]:disabled {
 }
 
 .cta-button:hover {
-    background-color: #e0a800;
+    background-color: #5e1300;
     color: #000;
     transform: scale(1.1);
     box-shadow: 0 0 15px #ff00004981, 0 0 30px #ff00004981;
