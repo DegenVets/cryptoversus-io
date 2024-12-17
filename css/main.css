@@ -494,8 +494,9 @@ a {
         display: flex;
         overflow: hidden;
         width: 100%;
+        min-height: 500px;
         position: relative;
-        background: linear-gradient(to bottom, #363434, #5f5454);
+        background: transparent;
         padding: 0px 0;
         overflow: hidden;
         white-space: nowrap;
@@ -504,7 +505,7 @@ a {
     }
     
     .shop-item img {
-        max-width: 500px;
+        max-width: 100%;
         max-height: 500px;
     }
 }
@@ -515,12 +516,22 @@ a {
     }
     
     .carousel-container {
-        height: 400px;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        min-height: 500px;
+        position: relative;
+        background: transparent;
+        padding: 0px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
     }
     
     .shop-item img {
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 100%;
+        max-height: 500px;
     }
 }
 
