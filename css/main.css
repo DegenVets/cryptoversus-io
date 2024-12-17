@@ -222,6 +222,7 @@ a {
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    background-image: url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
 }
 .container-c {
     display: flex;
@@ -298,7 +299,7 @@ a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     text-align: center;
     padding: 20px;
