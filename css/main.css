@@ -70,11 +70,22 @@ nav {
     }
 }
 
-h1, h2 {
+h1 {
+    font-size: 2.7em;
+    margin: 20px 0;
+    color: #000000;
+    text-shadow: 0 0 5px #eeb64f, 0 0 10px #e29d1da1, 0 0 20px #eeb64f;
+}
+h2 {
     font-size: 2.5em;
     margin: 20px 0;
     color: #000000;
     text-shadow: 0 0 5px #eeb64f, 0 0 10px #e29d1da1, 0 0 20px #eeb64f;
+}
+h3 {
+    font-size: 1.7em;
+    margin: 20px 0;
+    color: #000000;
 }
 
 hr {
@@ -85,7 +96,7 @@ hr {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 20px 0;
 }
 
@@ -303,7 +314,7 @@ a {
     font-style: italic;
     color: #444;
     margin-top: 20px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .right-section {
@@ -324,13 +335,13 @@ a {
 
 .right-section ul li {
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #333;
 }
 
 .highlight {
     color: #d62f2f;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 20px 0;
 }
