@@ -1,30 +1,7 @@
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #000000;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
+    --primary-color: #ff00004981;
+    --secondary-color: #eeb64f;
+    --background-gradient: linear-gradient(135deg, #000000, #201616, #2c2525, #201616, #000000);
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -46,8 +23,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
 
 header {
     background-color: #222;
@@ -131,6 +106,14 @@ p {
 .menu a:hover {
     color: #eeb64f;
     text-shadow: 0 0 10px #eeb64f, 0 0 20px #eeb64f;
+}
+
+.menu a:active {
+    color: #aa0000b9; 
+}
+
+.menu a:visited {
+    color: #ff000049;
 }
 
 /* General Mobile Styles (up to 768px) */
@@ -284,7 +267,83 @@ p {
     color: #555; /* Slightly muted color for text */
 }
 
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 200px;
+    background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
+    padding: 20px 0;
+}
 
+.shop-carousel {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+}
+
+.shop-carousel:hover {
+    animation-play-state: paused;
+}
+
+.shop-item {
+    flex: 0 0 calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.shop-item img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    filter: grayscale(20%) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.shop-item:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .shop-item {
+        flex: 0 0 100%; /* Full width for small screens */
+    }
+    
+    .carousel-container {
+        height: 150px;
+    }
+    
+    .shop-item img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
 
 #home {
     display: flex;
@@ -357,10 +416,10 @@ input:focus, textarea:focus {
 }
 
 input[type="submit"] {
-    background: #09daff;
+    background: #ff000049;
     color: #000;
-    border: 2px solid #09daff;
-    box-shadow: 0 0 10px #09daff, 0 0 20px #09daff;
+    border: 2px solid #ff000049
+    box-shadow: 0 0 10px #09daff, 0 0 20px #ff000049;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -499,55 +558,6 @@ footer {
 
 .share-menu a:hover {
     background: #aaa7a771;
-}
-
-.shop-carousel {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.shop-item {
-    flex: 0 0 calc(33.333% - 10px);
-    max-width: calc(33.333% - 10px);
-    margin-right: 10px;
-}
-
-.shop-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-}
-
-/* Ensure any text within shop-item is hidden */
-.shop-item > *:not(img) {
-    display: none !important;
-}
-
-.shop-text {
-    display: none !important;
-}
-
-.carousel-container::before, .carousel-container::after {
-    content: '';
-    display: none;
-}
-
-.shop-itemhtml {
-    scroll-behavior: smooth;
 }
 
 html {

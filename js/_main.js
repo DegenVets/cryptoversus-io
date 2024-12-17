@@ -15,47 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneError = document.getElementById('phoneError');
     const messageError = document.getElementById('messageError');
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const carousel = document.querySelector('.carousel-container');
-        const items = Array.from(carousel.children);
-        const itemCount = items.length;
-        const itemsToClone = Math.min(3, itemCount);
-        let currentIndex = 0;
+    const carousel = document.querySelector('.shop-carousel');
+    const carouselContainer = document.querySelector('.carousel-container');
     
-        // Clone items to make it loopable
-        for (let i = 0; i < itemsToClone; i++) {
-            const firstClone = items[i].cloneNode(true);
-            const lastClone = items[itemCount - 1 - i].cloneNode(true);
-            carousel.appendChild(firstClone);
-            carousel.insertBefore(lastClone, items[0]);
-        }
+    // Optional: Pause animation on hover
+    carousel.addEventListener('mouseenter', () => {
+        carousel.style.animationPlayState = 'paused';
+    });
     
-        const totalItems = itemCount + (itemsToClone * 2);
+    carousel.addEventListener('mouseleave', () => {
+        carousel.style.animationPlayState = 'running';
+    });
     
-        // Set the position of the carousel
-        function setCarouselPosition(index) {
-            carousel.style.transform = `translateX(-${index * (100 / totalItems)}%)`;
-        }
-    
-        // Rotate the carousel
-        function rotateCarousel() {
-            currentIndex++;
-            carousel.style.transition = 'transform 0.5s ease';
-            setCarouselPosition(currentIndex);
-    
-            // Reset when at the end for seamless looping
-            if (currentIndex >= totalItems) {
-                setTimeout(() => {
-                    carousel.style.transition = 'none'; // No transition for reset
-                    currentIndex = 0;
-                    setCarouselPosition(currentIndex);
-                }, 500); // Reset after transition time
-            }
-        }
-    
-        // Call rotateCarousel function at a regular interval
-        setInterval(rotateCarousel, 3000); // Change slide every 3 seconds
-
     // Sanitize user input
     const sanitizeInput = (input) => {
         const sanitized = input
@@ -168,17 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         messageError.textContent = isMessageValid ? '' : 'Message cannot be empty';
 
         submitBtn.disabled = !(isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && isMessageValid);
-    };
-
-    // Glitch effect for text
-    const glitchEffect = (element) => {
-        setInterval(() => {
-            const randomX = Math.random() * 4 - 2;
-            const randomY = Math.random() * 4 - 2;
-            element.style.textShadow = `
-                ${randomX}px ${randomY}px#ff000049,
-                ${-randomX}px ${-randomY}pxrgba(251, 255, 0, 0.58)`;
-        }, 100);
     };
 
     document.querySelectorAll('h1, h2').forEach(glitchEffect);
