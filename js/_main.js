@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.addEventListener('mouseleave', () => {
         carousel.style.animationPlayState = 'running';
     });
-    
+
     // Sanitize user input
     const sanitizeInput = (input) => {
         const sanitized = input
@@ -231,6 +231,7 @@ function closeTab() {
     window.open('', '_self').close();
 }
 
+});
 document.querySelectorAll('.share-dots').forEach(dot => {
     dot.addEventListener('click', (e) => {
         e.preventDefault();
@@ -296,5 +297,3 @@ function closeShareMenu(e) {
         document.removeEventListener('click', closeShareMenu);
     }
 }
-
-});

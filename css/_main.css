@@ -233,27 +233,27 @@ p {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
-    gap: 20px; /* Space between grid items */
-    text-align: center; /* Center aligns content */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
     padding: 20px;
-    max-width: 1200px; /* Prevents the grid from stretching too wide */
-    margin: 0 auto; /* Centers the grid horizontally */
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
 
 .grid-item {
-    background-color: #f5f5f528; /* Light gray background */
+    background-color: #f5f5f528; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .grid-item img {
-    width: 60px; /* Control icon size */
+    width: 60px; 
     height: 60px;
-    object-fit: contain; /* Prevent image distortion */
-    margin-bottom: 15px; /* Space between icon and heading */
+    object-fit: contain; 
+    margin-bottom: 15px; 
 }
 
 .grid-item h3 {
@@ -264,15 +264,15 @@ p {
 
 .grid-item p {
     font-size: 0.9em;
-    color: #555; /* Slightly muted color for text */
+    color: #555;
 }
 
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 100%;
+    width: 50%;
     position: relative;
-    height: 200px;
+    height: 300px;
     background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
     padding: 20px 0;
 }
@@ -309,8 +309,8 @@ p {
 }
 
 .shop-item img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: contain;
     filter: grayscale(20%) brightness(0.9);
     transition: filter 0.3s ease;
@@ -329,10 +329,10 @@ p {
     }
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
     .shop-item {
-        flex: 0 0 100%; /* Full width for small screens */
+        flex: 0 0 100%; 
     }
     
     .carousel-container {
@@ -466,7 +466,10 @@ input[type="submit"]:disabled {
     font-size: 1rem;
     line-height: 1.6;
     text-shadow: 0 0 5px #ff000049;
-    margin-bottom: 15px;    font-weight: bold;
+    margin-bottom: 15px;    
+    font-weight: bold;
+}
+
 #about p:last-child {
     margin-bottom: 0;
 }
@@ -505,59 +508,6 @@ footer {
     text-align: center;
     font-size: calc(8px + 1vw);
     text-shadow: 0 0 5px #ff00004946, 0 0 10px #ff000049, 0 0 20px #ff000049;
-}
-
-/* sharedots.css */
-.button {
-    position: relative;
-    padding-right: 40px; 
-}
-
-.share-dots {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    line-height: 24px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0); 
-    transition: color 0.3s ease;
-}
-
-.share-dots:hover {
-    color: rgba(255, 0, 0, 0.37); 
-}
-
-.share-dots::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60%;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.share-menu {
-    background: rgba(255, 255, 255, 0);
-    border: 1px solid #000000;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 10px;
-    z-index: 1000;
-}
-
-.share-menu a {
-    display: block;
-    padding: 5px 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.share-menu a:hover {
-    background: #aaa7a771;
 }
 
 html {
