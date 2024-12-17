@@ -508,6 +508,15 @@ a {
         max-width: 100%;
         max-height: 500px;
     }
+
+    .shop-carousel {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -527,6 +536,15 @@ a {
         white-space: nowrap;
         padding: 0;
         margin: 0;
+    }
+
+    .shop-carousel {
+        display: flex;
+        animation: scroll 40s linear infinite;
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        gap: 0;
     }
     
     .shop-item img {
