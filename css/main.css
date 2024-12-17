@@ -488,8 +488,23 @@ a {
     }
     
     .shop-item img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-item {
+        flex: 0 0 100%; 
+    }
+    
+    .carousel-container {
+        height: 400px;
+    }
+    
+    .shop-item img {
+        max-width: 400px;
+        max-height: 400px;
     }
 }
 
