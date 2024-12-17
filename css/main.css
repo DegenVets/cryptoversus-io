@@ -58,6 +58,18 @@ nav {
     animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #ff000049, 0 0 20px #ff000049;
+    }
+    50% {
+        box-shadow: 0 0 20px #eeb64f, 0 0 40px #eeb64f;
+    }
+    100% {
+        box-shadow: 0 0 10px #ff000017, 0 0 20px #ff000093;
+    }
+}
+
 h1, h2 {
     font-size: 2.5em;
     margin: 20px 0;
@@ -116,9 +128,25 @@ p {
     color: #ff000049;
 }
 
-/* General Mobile Styles (up to 768px) */
+a {
+    color: #eeb64f;
+    text-decoration: none; 
+  }
+  
+  a:hover {
+    color: #ff5722;
+    text-shadow: 0 0 10px #eeb64f, 0 0 20px #eeb64f;
+  }
+  
+  a:visited {
+    color: #ff000049;
+  }
+  
+  a:active {
+    color: #aa0000b9;
+  }
+
 @media (max-width: 768px) {
-    /* Stack containers vertically */
     .container {
         flex-direction: column;
         text-align: center;
@@ -129,28 +157,28 @@ p {
     }
 
     .right-section {
-        padding-left: 0; /* Ensure no unwanted padding */
+        padding-left: 0;
     }
 
     .cta-button {
         margin-top: 10px;
     }
+    .cta-button2 {
+        margin-top: 20px;
+    }
 
-    /* Grid items stack in one column */
     .grid-container {
         grid-template-columns:2, 1fr;
         gap: 200px;
     }    
     
-    /* Carousel Items */
     .shop-item {
-        flex: 0 0 100%; /* Full width for small screens */
+        flex: 0 0 100%;
         max-width: 100%;
         margin-right: 0;
     }
 }
 
-/* Footer Optimization for Smaller Screens */
 @media (max-width: 600px) {
     footer {
         font-size: calc(6px + 1.5vw);
@@ -275,7 +303,7 @@ p {
     gap: 20px;
     text-align: center;
     padding: 20px;
-    max-width: 1200px; 
+    max-width: 100%; 
     margin: 0 auto;
 }
 
@@ -527,7 +555,28 @@ input[type="submit"]:disabled {
     transition: all 0.3s ease-in-out;
 }
 
+.cta-button2 {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #ff00004981;
+    border-radius: 5px;
+    background-color: #e0a800;
+    box-shadow: 0 0 10px #ff000049, 0 0 20px #ff000049;
+    transition: all 0.3s ease-in-out;
+}
+
 .cta-button:hover {
+    background-color: #5e1300;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff00004981, 0 0 30px #ff00004981;
+}
+.cta-button2:hover {
     background-color: #5e1300;
     color: #000;
     transform: scale(1.1);
@@ -535,14 +584,14 @@ input[type="submit"]:disabled {
 }
 
 footer {
-    background: linear-gradient(to bottom, #22222244, #81818131);
+    background: linear-gradient(to bottom, #2222227c, #8181818c);
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 5px 0;
     z-index: 1000;
-    color: #000000;
+    color: #e0a800;
     text-align: top;
     font-size: calc(8px + 1vw);
     text-shadow: 0 0 5px #ff00004946, 0 0 10px #ff000049, 0 0 20px #ff000049;
