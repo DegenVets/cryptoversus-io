@@ -117,7 +117,7 @@ p {
 }
 
 /* General Mobile Styles (up to 768px) */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     /* Stack containers vertically */
     .container {
         flex-direction: column;
@@ -139,7 +139,7 @@ p {
     /* Grid items stack in one column */
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
     }    
     
     /* Carousel Items */
@@ -336,7 +336,7 @@ p {
     }
     
     .carousel-container {
-        height: 150px;
+        height: 300px;
     }
     
     .shop-item img {
