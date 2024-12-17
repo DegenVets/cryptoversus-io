@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background-color: #222;
+    background: linear-gradient(to bottom, #222, #0c0404);
     position: fixed;
     top: 0;
     left: 0;
@@ -154,6 +154,7 @@ p {
 @media (max-width: 600px) {
     footer {
         font-size: calc(6px + 1.5vw);
+        text-align: top;
     }
 }
 
@@ -165,7 +166,44 @@ p {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 10%;
-    background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
+    background: linear-gradient(to bottom, #00000069, #b1b1b1);
+}
+
+.container-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: linear-gradient(to right, #949494 , #8a8a8a9f, #949494);
+}
+
+.container-b {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 23px;
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(87, 83, 76), 0 0 20px rgb(221, 125, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: linear-gradient(to bottom, #00000069, #292727);
+    background-image: url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.container-c {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: transparent;
 }
 
 .left-section, .right-section {
@@ -273,7 +311,7 @@ p {
     width: 50%;
     position: relative;
     height: 300px;
-    background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
+    background: linear-gradient(to bottom, #363434, #5f5454);
     padding: 20px 0;
 }
 
@@ -380,7 +418,7 @@ label {
 }
 
 input, textarea {
-    background-color: transparent;
+    background-color: #fcfcfc91;
     border: 1px solid #ff00004981;
     color: #000000;
     box-shadow: 0 0 5px #ff00004981;
@@ -425,9 +463,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover:not(:disabled) {
-    background: #ff00004949;
-    border-color: #ff000049;
-    box-shadow: 0 0 10px #ff000049, 0 0 20px #ff000049;
+    background: #e0a800;
+    border-color: #e0a800;
+    box-shadow: 0 0 10px #e0a800, 0 0 20px #ff000049;
 }
 
 input[type="submit"]:disabled {
@@ -484,7 +522,7 @@ input[type="submit"]:disabled {
     text-decoration: none;
     border: 2px solid #ff00004981;
     border-radius: 5px;
-    background: transparent;
+    background-color: #e0a800;
     box-shadow: 0 0 10px #ff000049, 0 0 20px #ff000049;
     transition: all 0.3s ease-in-out;
 }
@@ -497,7 +535,7 @@ input[type="submit"]:disabled {
 }
 
 footer {
-    background-color: #222;
+    background: linear-gradient(to bottom, #22222244, #81818131);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -505,7 +543,7 @@ footer {
     padding: 5px 0;
     z-index: 1000;
     color: #000000;
-    text-align: center;
+    text-align: top;
     font-size: calc(8px + 1vw);
     text-shadow: 0 0 5px #ff00004946, 0 0 10px #ff000049, 0 0 20px #ff000049;
 }
