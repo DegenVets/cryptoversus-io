@@ -235,6 +235,17 @@ a {
     background: transparent;
 }
 
+.container-d {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: transparent;
+}
+
 .container-c .right-section,
 .container-c .left-section {
     flex: 1;
@@ -251,6 +262,7 @@ a {
 
 @media screen and (max-width: 768px) {
     .container-c {
+        flex-wrap: wrap;
         transform: scale(0.8);
         transform-origin: top left;
     }
@@ -258,6 +270,7 @@ a {
 
 @media screen and (max-width: 480px) {
     .container-c {
+        flex-wrap: wrap;
         transform: scale(0.6);
         transform-origin: top left;
     }
