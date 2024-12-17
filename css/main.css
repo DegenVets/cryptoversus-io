@@ -229,11 +229,11 @@ a {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 10%;
-    background: linear-gradient(to bottom, #00000069, #292727);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(41, 39, 39, 0.8)), 
+                url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
-    background-image: url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
 }
 .container-c {
     display: flex;
@@ -397,11 +397,11 @@ a {
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 80%;
+    width: 60%;
     position: relative;
     height: 500px;
     background: linear-gradient(to bottom, #363434, #5f5454);
-    padding: 20px 0;
+    padding: 0px 0;
     overflow: hidden;
     white-space: nowrap;
     padding: 0;
@@ -479,7 +479,7 @@ a {
     }
     
     .carousel-container {
-        height: 150px;
+        height: 500px;
     }
     
     .shop-item img {
