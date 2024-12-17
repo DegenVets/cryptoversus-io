@@ -511,8 +511,8 @@ a {
 
     .shop-carousel {
         display: flex;
-        animation: scroll 10s linear infinite;
-        width: 100%;
+        animation: scroll 5s linear infinite;
+        width: max-content;
         margin: 0;
         padding: 0;
         gap: 0;
@@ -540,8 +540,8 @@ a {
 
     .shop-carousel {
         display: flex;
-        animation: scroll 10s linear infinite;
-        width: 100%;
+        animation: scroll 5s linear infinite;
+        width: max-content;
         margin: 0;
         padding: 0;
         gap: 0;
