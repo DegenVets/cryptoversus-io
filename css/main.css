@@ -117,7 +117,7 @@ p {
 }
 
 /* General Mobile Styles (up to 768px) */
-@media (max-width: 100%) {
+@media (max-width: 768px) {
     /* Stack containers vertically */
     .container {
         flex-direction: column;
@@ -139,7 +139,7 @@ p {
     /* Grid items stack in one column */
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 30px;
     }    
     
     /* Carousel Items */
