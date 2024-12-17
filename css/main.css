@@ -260,8 +260,9 @@ a {
 @media screen and (max-width: 480px) {
     .container-a,
     .container-c {
-        transform: scale(0.6);
-        transform-origin: top left;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
     }
 }
 
