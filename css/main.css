@@ -402,12 +402,28 @@ a {
     height: 300px;
     background: linear-gradient(to bottom, #363434, #5f5454);
     padding: 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
 }
 
 .shop-carousel {
     display: flex;
     animation: scroll 20s linear infinite;
     width: max-content;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.shop-carousel img {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
 }
 
 .shop-carousel:hover {
