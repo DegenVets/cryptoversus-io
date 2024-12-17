@@ -213,7 +213,7 @@ a {
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 0 10%;
     background: linear-gradient(to right, #949494 , #8a8a8a9f, #949494);
 }
@@ -286,6 +286,11 @@ a {
         transform-origin: top left;
     }
     .container-a {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .container-b {
         width: 100vw;
         margin: 0;
         padding: 0;
