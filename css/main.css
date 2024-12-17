@@ -162,10 +162,20 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 0 10%;
     background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
+}
+
+.container-b {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: linear-gradient(to bottom, #8a8a8a69, #b1b1b162);
 }
 
 .left-section, .right-section {
