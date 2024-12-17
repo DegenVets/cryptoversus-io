@@ -138,8 +138,8 @@ p {
 
     /* Grid items stack in one column */
     .grid-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns:2, 1fr;
+        gap: 200px;
     }    
     
     /* Carousel Items */
@@ -162,20 +162,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 0 10%;
-    background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
-}
-
-.container-b {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 10%;
-    background: linear-gradient(to bottom, #8a8a8a69, #b1b1b162);
+    background: linear-gradient(to bottom, #8a8a8a, #b1b1b1);
 }
 
 .left-section, .right-section {
@@ -247,7 +237,7 @@ p {
     gap: 20px;
     text-align: center;
     padding: 20px;
-    max-width: 100%; 
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
@@ -346,7 +336,7 @@ p {
     }
     
     .carousel-container {
-        height: 300px;
+        height: 150px;
     }
     
     .shop-item img {
