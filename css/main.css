@@ -241,11 +241,11 @@ a {
 .left-section {
     text-align: center;
     font-weight: bold;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .left-section img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -259,7 +259,7 @@ a {
 .right-section {
     text-align: left;
     font-weight: bold;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .right-section h2 {
@@ -293,7 +293,7 @@ a {
 }
 
 .graphic img {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
