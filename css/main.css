@@ -397,9 +397,9 @@ a {
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 50%;
+    width: 80%;
     position: relative;
-    height: 300px;
+    height: 500px;
     background: linear-gradient(to bottom, #363434, #5f5454);
     padding: 20px 0;
     overflow: hidden;
@@ -452,8 +452,8 @@ a {
 }
 
 .shop-item img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
     object-fit: contain;
     filter: grayscale(20%) brightness(0.9);
     transition: filter 0.3s ease;
