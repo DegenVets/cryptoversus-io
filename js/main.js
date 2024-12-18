@@ -15,44 +15,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneError = document.getElementById('phoneError');
     const messageError = document.getElementById('messageError');
 
+    // carousel
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
     const carousel = document.querySelector('.shop-carousel');
     const carouselContainer = document.querySelector('.carousel-container');
     
-    // Optional: Pause animation on hover
     carousel.addEventListener('mouseenter', () => {
         carousel.style.animationPlayState = 'paused';
     });
-    
-    carousel.addEventListener('mouseleave', () => {
-        carousel.style.animationPlayState = 'running';
-    });
-
-    // Sanitize user input
-    const sanitizeInput = (input) => {
-        const sanitized = input
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;")
-            .replace(/[\r\n]/g, " ");
-        return sanitized.trim();
-    };
-
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
+    class Carousel {
+        constructor(container) {
+            this.track = container.querySelector('.carousel-track');
+            this.items = Array.from(container.querySelectorAll('.carousel-item'));
+            this.currentIndex = 0;
+            this.itemWidth = this.items[0].clientWidth;
+            
+            this.track.insertBefore(this.items[this.items.length - 1].cloneNode(true), this.items[0]);
+            this.track.appendChild(this.items[0].cloneNode(true));
+            
+            this.updateTrackPosition();
+        }
+        updateTrackPosition() {
+            const offset = -(this.currentIndex + 1) * this.itemWidth;
+            this.track.style.transform = `translateX(${offset}px)`;
+        }
+        next() {
+            this.currentIndex++;
+            this.updateTrackPosition();
+            if (this.currentIndex === this.items.length) {
+                setTimeout(() => {
+                    this.currentIndex = 0;
+                    this.track.style.transition = 'none';
+                    this.updateTrackPosition();                  
+                    setTimeout(() => {
+                        this.track.style.transition = 'transform 0.5s ease';
+                    }, 50);
+                }, 500);
             }
-        });
+        }
+        prev() {
+            this.currentIndex--;           
+            this.updateTrackPosition();
+            if (this.currentIndex === -1) {
+                setTimeout(() => {
+                    this.currentIndex = this.items.length - 1;
+                    this.track.style.transition = 'none';
+                    this.updateTrackPosition();                   
+                    setTimeout(() => {
+                        this.track.style.transition = 'transform 0.5s ease';
+                    }, 50);
+                }, 500);
+            }
+        }
+    }
+prevButton.addEventListener('click', () => {
+    carousel.prev();
+});
+nextButton.addEventListener('click', () => {
+    carousel.next();
+});
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carousel = new Carousel(carouselContainer);
+
+    // Example controls (you can customize these)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') carousel.next();
+        if (e.key === 'ArrowLeft') carousel.prev();
     });
 
     // Input validation logic

@@ -409,8 +409,9 @@ a {
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 60%;
+    width: 65%;
     position: relative;
+    height: 100%;
     background: linear-gradient(to bottom, #363434, #5f5454);
     padding: 0px 0;
     overflow: hidden;
@@ -419,10 +420,38 @@ a {
     margin: 0;
 }
 
+button.carousel-prev,
+button.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.carousel-prev {
+    left: 10px; /* Position to the left */
+}
+
+button.carousel-next {
+    right: 10px; /* Position to the right */
+}
+
+button.carousel-prev:hover,
+button.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .shop-carousel {
     display: flex;
-    animation: scroll 12s linear infinite;
-    width: 60%;
+    animation: scroll 10s linear infinite;
+    max-width: 80%;
+    height: 100%;
     margin: 0;
     padding: 0;
     gap: 0;
