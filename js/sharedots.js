@@ -1,5 +1,3 @@
-// sharedots.js
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.share-dots').forEach(dot => {
         dot.addEventListener('click', (e) => {
@@ -70,4 +68,3 @@ function closeShareMenu(e) {
         document.removeEventListener('click', closeShareMenu);
     }
 }
-});
