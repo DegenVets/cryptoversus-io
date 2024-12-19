@@ -1,0 +1,144 @@
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-section, .right-section {
+        padding: 0;
+    }
+
+    .right-section {
+        padding-left: 0;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+    }
+    .cta-button2 {
+        margin-top: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns:2, 1fr;
+        gap: 200px;
+    }    
+    
+    .shop-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    footer {
+        font-size: calc(6px + 1.5vw);
+        text-align: top;
+    }
+
+    .container-c {
+        flex-wrap: wrap;
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+
+    .container-c {
+        flex-wrap: wrap;
+        transform: scale(0.5);
+        transform-origin: top left;
+    }
+    .container-a {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .container-b {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .shop-item {
+        flex: 0 0 100%; 
+    }
+    
+    .carousel-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+        background: transparent;
+        padding: 0px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .shop-item img {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .shop-carousel {
+        display: flex;
+        animation: scroll 5s linear infinite;
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-item {
+        flex: 0 0 100%; 
+    }
+    
+    .carousel-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+        background: transparent;
+        padding: 0px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .shop-carousel {
+        display: flex;
+        animation: scroll 5s linear infinite;
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+    
+    .shop-item img {
+        max-width: 100%;
+        max-height: 300px;
+    }
+}
+
+
+footer {
+    background: linear-gradient(to bottom, #2222227c, #8181818c);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 1000;
+    color: #e0a800;
+    text-align: top;
+    font-size: calc(8px + 1vw);
+    text-shadow: 0 0 5px #ff00004946, 0 0 10px #ff000049, 0 0 20px #ff000049;
+}
+
+html {
+    scroll-behavior: smooth;
+}

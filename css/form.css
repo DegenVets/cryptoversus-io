@@ -1,0 +1,79 @@
+
+form {
+    margin: 20px 0;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    background-color: #fcfcfc91;
+    border: 1px solid #ff00004981;
+    color: #000000;
+    box-shadow: 0 0 5px #ff00004981;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #eeb64f;
+    box-shadow: 0 0 10px #eeb64f;
+}
+
+.phone-input {
+    display: flex;
+    padding: 0;
+}
+
+.phone-input select, .phone-input input {
+    border: none;
+    background-color: #222;
+    color: #000000;
+}
+
+.phone-input select {
+    width: 150px;
+    border-right: 1px solid #333;
+}
+
+.phone-input input {
+    flex-grow: 1;
+}
+
+input[type="submit"] {
+    background: #ff000049;
+    color: #000;
+    border: 2px solid #ff000049
+    box-shadow: 0 0 10px #09daff, 0 0 20px #ff000049;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover:not(:disabled) {
+    background: #e0a800;
+    border-color: #e0a800;
+    box-shadow: 0 0 10px #e0a800, 0 0 20px #ff000049;
+}
+
+input[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #ff4136;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+}
