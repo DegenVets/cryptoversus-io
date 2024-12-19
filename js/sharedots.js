@@ -70,3 +70,4 @@ function closeShareMenu(e) {
         document.removeEventListener('click', closeShareMenu);
     }
 }
+});
