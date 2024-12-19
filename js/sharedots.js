@@ -1,9 +1,13 @@
-document.querySelectorAll('.share-dots').forEach(dot => {
-    dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const link = e.target.closest('.button').getAttribute('href');
-        shareLink(link, e.target);
+// sharedots.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.share-dots').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const link = e.target.closest('.button').getAttribute('href');
+            shareLink(link, e.target);
+        });
     });
 });
 
@@ -47,12 +51,15 @@ function showShareMenu(link, target) {
         <a href="https://www.linkedin.com/shareArticle?url=${encodeURIComponent(link)}" target="_blank">Share on LinkedIn</a>
     `;
 
+
     const rect = target.getBoundingClientRect();
     menu.style.position = 'absolute';
     menu.style.top = `${rect.bottom + window.scrollY}px`;
     menu.style.left = `${rect.left + window.scrollX}px`;
 
     document.body.appendChild(menu);
+
+
     document.addEventListener('click', closeShareMenu);
 }
 

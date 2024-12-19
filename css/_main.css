@@ -1,9 +1,11 @@
-@import url('carousel.css');
-@import url('mobile.css');
-@import url('cta-button.css');
-@import url('form.css');
-@import url('grid-container.css');
-@import url('left-right.css');
+@import url('./carousel.css');
+@import url('./mobile.css');
+@import url('./cta-button.css');
+@import url('./form.css');
+@import url('./grid-container.css');
+@import url('./left-right.css');
+@import url('./chat.css');
+@import url('./sharedots.css');
 
 :root {
     --primary-color: #ff00004981;
@@ -63,6 +65,26 @@ nav {
     height: 100%;
     border-radius: 50%;
     animation: pulse 2s infinite;
+}
+
+
+.highlight {
+    color: #d62f2f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.graphic {
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.graphic img {
+    width: 100%;
+    height: auto;
 }
 
 @keyframes pulse {
@@ -174,88 +196,6 @@ a {
     background: linear-gradient(to bottom, #00000069, #b1b1b1);
 }
 
-.container-a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 0px auto;
-    padding: 0 10%;
-    background: linear-gradient(to right, #949494 , #8a8a8a9f, #949494);
-}
-
-.container-b {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 23px;
-    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(87, 83, 76), 0 0 20px rgb(221, 125, 0);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(41, 39, 39, 0.8)), 
-                url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.container-c {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10%;
-    background: transparent;
-}
-
-.container-d {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10%;
-    background: transparent;
-}
-
-.container-c .right-section,
-.container-c .left-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-c .right-section img {
-    max-width: 65%;
-    height: auto;
-}
-
-.highlight {
-    color: #d62f2f;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.graphic {
-    margin: 20px auto;
-    width: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.graphic img {
-    width: 100%;
-    height: auto;
-}
-
 #home {
     display: flex;
     flex-direction: column;
@@ -265,13 +205,14 @@ a {
     margin: 60px auto;
 }
 
-#contact {
+.container-a {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 60px auto;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 0 10%;
+    background: linear-gradient(to right, #949494 , #8a8a8a9f, #949494);
 }
 
 #about, #whitepaper {
@@ -304,6 +245,69 @@ a {
 
 #about p:last-child {
     margin-bottom: 0;
+}
+
+.container-b {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 23px;
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(87, 83, 76), 0 0 20px rgb(221, 125, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(41, 39, 39, 0.8)), 
+                url('https://storage.builderall.com//franquias/2/7304564/editor-html/12530868.jpeg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 60px auto;
+}
+
+.container-c {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: transparent;
+}
+
+.container-c .right-section,
+.container-c .left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-c .right-section img {
+    max-width: 65%;
+    height: auto;
+}
+
+.container-d {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10%;
+    background: transparent;
 }
 
 footer {
