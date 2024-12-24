@@ -1,0 +1,105 @@
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 65%;
+    position: relative;
+    height: 100%;
+    background: linear-gradient(to bottom, #363434, #5f5454);
+    padding: 0px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-prev,
+button.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padbuttonding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.carousel-prev {
+    left: 10px; /* Position to the left */
+}
+
+button.carousel-next {
+    right: 10px; /* Position to the right */
+}
+
+button.carousel-prev:hover,
+button.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.shop-carousel {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    max-width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.shop-carousel img {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.shop-carousel:hover {
+    animation-play-state: paused;
+}
+
+.shop-item {
+    flex: 0 0 calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.shop-item img {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
+    filter: grayscale(20%) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.shop-item:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

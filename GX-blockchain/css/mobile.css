@@ -1,0 +1,151 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 8px;
+    }
+
+    .connect-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .hamburger-line {
+        width: 25px;
+        height: 2.5px;
+        margin: 4px 0;
+    }
+
+    .sidebar {
+        width: 200px;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .content {
+        padding: 60px 10px;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-button3 {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .menu-toggle {
+        top: 5px;
+        left: 5px;
+        padding: 6px;
+    }
+
+    .connect-btn {
+        top: 5px;
+        right: 5px;
+        padding: 6px;
+    }
+
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .sidebar {
+        width: 180px;
+        padding-top: 50px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .content {
+        padding: 50px 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .cta-button3 {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .sidebar-content {
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .menu-toggle {
+        top: 5px;
+        left: 5px;
+        padding: 4px;
+    }
+
+    .connect-btn {
+        top: 5px;
+        right: 5px;
+        padding: 4px;
+    }
+
+    .hamburger-line {
+        width: 15px;
+        height: 1.5px;
+        margin: 2px 0;
+    }
+
+    .sidebar {
+        width: 150px;
+        padding-top: 40px;
+    }
+
+    .sidebar a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .content {
+        padding: 40px 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .cta-button3 {
+        padding: 4px 10px;
+        font-size: 0.7rem;
+    }
+}
