@@ -1,0 +1,106 @@
+
+name: Deploy GX-web and GX-blockchain content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy-gx-web:
+    name: Deploy GX-web Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare GX-web deployment
+        run: |
+          mkdir -p ./output/GX-web
+          echo "Copying all files from GX-web except index.html..."
+          find ./GX-web -type f ! -name "index.html" -exec cp --parents {} ./output/GX-web/ \;
+          echo "Output directory structure for GX-web:"
+          ls -R ./output/GX-web
+
+      - name: Upload GX-web artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './output/GX-web'
+
+      - name: Deploy GX-web to GitHub Pages
+        id: deployment-web
+        uses: actions/deploy-pages@v4
+
+  deploy-gx-blockchain:
+    name: Deploy GX-blockchain Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare GX-blockchain deployment
+        run: |
+          mkdir -p ./output/GX-blockchain
+          echo "Copying all files from GX-blockchain to output directory..."
+          cp -R ./GX-blockchain/* ./output/GX-blockchain/
+          echo "Checking for index.html in static directory..."
+          if [ ! -f ./GX-blockchain/static/index.html ]; then
+            echo "Error: GX-blockchain/static/index.html not found!"
+            exit 1
+          fi
+          echo "Moving index.html from static directory to root of output/GX-blockchain..."
+          mv ./output/GX-blockchain/static/index.html ./output/GX-blockchain/index.html
+          echo "Output directory structure for GX-blockchain:"
+          ls -R ./output/GX-blockchain
+
+      - name: Upload GX-blockchain artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './output/GX-blockchain'
+
+      - name: Deploy GX-blockchain to GitHub Pages
+        id: deployment-blockchain
+        uses: actions/deploy-pages@v4
+
+          deploy-docs:
+    name: Deploy docs Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare docs deployment
+        run: |
+          mkdir -p ./output/docs
+          echo "Copying all files from docs except index.html..."
+          find ./docs -type f ! -name "index.html" -exec cp --parents {} ./output/docs/ \;
+          echo "Copying all files from docs except index.html..."
+          echo "Output directory structure for docs:"
+          ls -R ./output/docs
+
+      - name: Upload docs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './output/docs'
+
+      - name: Deploy docs to GitHub Pages
+        id: deployment-web
+        uses: actions/deploy-pages@v4
