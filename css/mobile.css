@@ -1,133 +1,151 @@
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
+    body {
+        font-size: 0.9rem;
+        padding: 0 10px;
     }
 
-    .left-section, .right-section {
-        padding: 0;
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 8px;
     }
 
-    .right-section {
-        padding-left: 0;
+    .connect-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
     }
 
-    .cta-button {
-        margin-top: 10px;
-    }
-    .cta-button2 {
-        margin-top: 20px;
+    .hamburger-line {
+        width: 25px;
+        height: 2.5px;
+        margin: 4px 0;
     }
 
-    .grid-container {
-        grid-template-columns:2, 1fr;
-        gap: 200px;
-    }    
-    
-    .shop-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-right: 0;
+    .sidebar {
+        width: 200px;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .content {
+        padding: 60px 10px;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-button3 {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 600px) {
-    footer {
-        font-size: calc(6px + 1.5vw);
-        text-align: top;
+
+@media (max-width: 576px) {
+    .menu-toggle {
+        top: 5px;
+        left: 5px;
+        padding: 6px;
+    }
+
+    .connect-btn {
+        top: 5px;
+        right: 5px;
+        padding: 6px;
+    }
+
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .sidebar {
+        width: 180px;
+        padding-top: 50px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .content {
+        padding: 50px 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .cta-button3 {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .sidebar-content {
+        padding-bottom: 10px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .container-c {
-        flex-wrap: wrap;
-        transform: scale(0.8);
-        transform-origin: top left;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .container-c {
-        flex-wrap: wrap;
-        transform: scale(0.5);
-        transform-origin: top left;
-    }
-    .container-a {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-    }
-    .container-b {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .shop-item {
-        flex: 0 0 100%; 
-    }
-    
-    .carousel-container {
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-        min-height: 300px;
-        position: relative;
-        background: transparent;
-        padding: 0px 0;
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .shop-item img {
-        max-width: 100%;
-        max-height: 300px;
+@media (max-width: 375px) {
+    .menu-toggle {
+        top: 5px;
+        left: 5px;
+        padding: 4px;
     }
 
-    .shop-carousel {
-        display: flex;
-        animation: scroll 5s linear infinite;
-        width: max-content;
-        margin: 0;
-        padding: 0;
-        gap: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .shop-item {
-        flex: 0 0 100%; 
-    }
-    
-    .carousel-container {
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-        min-height: 300px;
-        position: relative;
-        background: transparent;
-        padding: 0px 0;
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 0;
-        margin: 0;
+    .connect-btn {
+        top: 5px;
+        right: 5px;
+        padding: 4px;
     }
 
-    .shop-carousel {
-        display: flex;
-        animation: scroll 5s linear infinite;
-        width: max-content;
-        margin: 0;
-        padding: 0;
-        gap: 0;
+    .hamburger-line {
+        width: 15px;
+        height: 1.5px;
+        margin: 2px 0;
     }
-    
-    .shop-item img {
-        max-width: 100%;
-        max-height: 300px;
+
+    .sidebar {
+        width: 150px;
+        padding-top: 40px;
+    }
+
+    .sidebar a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .content {
+        padding: 40px 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .cta-button3 {
+        padding: 4px 10px;
+        font-size: 0.7rem;
     }
 }

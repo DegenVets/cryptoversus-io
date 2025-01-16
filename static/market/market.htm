@@ -1,0 +1,60 @@
+<div id="pmarket" class="market-container">
+            <h1>Mint Passes</h1>
+            <hr>
+            <p>Tired of jumping through hoops on centralized platforms that bleed you dry and judge you by a résumé instead of real skills? The grind’s broken. Late payments, shady contracts, and faceless middlemen have ruled for too long. At CryptoVersus, we rewrite the system. This is a decentralized grid where you get paid for what you deliver—no fluff, no wasted hours—just completed "work tickets." Your reputation is earned in the network, built on results and peer respect, not outdated credentials. No overlords. No delays. Just you, your skills, and the work that matters. Plug in, and let’s flip the script.</p>
+            <p>For those seeking talent, CryptoVersus is the answer to the endless search for reliable, skilled developers. Say goodbye to the inefficiencies of traditional hiring platforms, where costs are inflated and time is wasted. Here, you can connect directly with workers who are motivated by results, not hours. With a reputation system rooted in proven performance, you can trust that the talent you find is as capable as they are accountable. No middlemen, no delays—just fast, fair access to the talent that gets things done.</p>
+            <div id="donate-form" class="donate-container">
+                <h2>Legacy Supporter</h2>
+    
+                <div class="form-group">
+                  <label for="crypto-select">Select cryptocurrency:</label>
+                  <select id="crypto-select" class="form-control">
+                    <option value="SOL">Solana (SOL)</option>
+                    <option value="USDC-SOL">USDC on Solana</option>
+                    <option value="MMOSH-SOL">MMOSH on Solana</option>
+                    <option value="ETH">Ethereum (ETH)</option>
+                    <option value="USDC-ETH">USDC on Ethereum</option>
+                    <option value="MATIC">Polygon (MATIC)</option>
+                    <option value="USDC-MATIC">USDC on Polygon</option>
+                    <option value="BTC">Bitcoin (BTC)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="amount-input">Amount:</label>
+                  <input type="number" id="amount-input" class="form-control" placeholder="Enter amount" step="0.000001" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="equivalent-value">Equivalent value:</label>
+                  <input type="text" id="equivalent-value" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="display-currency">Display currency:</label>
+                  <select id="display-currency" class="form-control">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                  </select>
+                </div>
+                <div class="qr-container"></div>
+                    <img src="https://raw.githubusercontent.com/DevCorpOrg/linktree/main/img/qr/btc.png" width="20%" alt="Bitcoin QR Code" class="qr-code" id="bitcoin-qr">
+                    <img src="https://raw.githubusercontent.com/DevCorpOrg/linktree/main/img/qr/eth.png" width="20%" alt="Ethereum QR Code" class="qr-code" id="ethereum-qr">
+                    <img src="https://raw.githubusercontent.com/DevCorpOrg/linktree/main/img/qr/sol.png" width="20%" alt="Solana QR Code" class="qr-code" id="solana-qr">
+                  </div>
+                <button id="donate-button" class="button">Donate with Wallet</button>
+                <div id="fallback-options" style="display: none;">
+                  <h3>Alternative donation methods:</h3>
+                  <div id="qr-code" class="text-center mb-3"></div>
+                  <div class="form-group">
+                    <label for="wallet-address">Wallet Address:</label>
+                    <div class="input-group">
+                      <input type="text" id="wallet-address" class="form-control" readonly>
+                      <button id="copy-address" class="btn btn-secondary">Copy</button>
+                    </div>
+                  </div>
+                </div>
+                <div><h2>Genesis Token</h2></div>
+                <div><h2>Grunt Pass</h2></div>
+                <div><h2>Director Cut</h2></div>
+              </div>
+        </div>

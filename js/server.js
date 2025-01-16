@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
 const express = require('express');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
