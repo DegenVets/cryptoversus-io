@@ -3,35 +3,35 @@ const FADE_DURATION = 300; // milliseconds
 
 const PAGE_MAPPINGS = {
     // Dashboard
-    'dashboard': './static/dashboard.htm',
+    'dashboard': './dashboard.htm',
 
     // Profile section
-    'profile-inbox': './static/profile/inbox.htm',
-    'profile-settings': './static/profile/settings.htm',
-    'profile-security': './static/profile/security.htm',
-    'profile-preferences': './static/profile/preferences.htm',
+    'profile-inbox': './profile/inbox.htm',
+    'profile-settings': './profile/settings.htm',
+    'profile-security': './profile/security.htm',
+    'profile-preferences': './profile/preferences.htm',
     
     // Portfolio section
-    'portfolio': './static/portfolio/wallet.htm',
-    'portfolio-award': './static/portfolio/awards.htm',
-    'portfolio-status': './static/portfolio/rank.htm',
-    'portfolio-preferences': './static/portfolio/wallet.htm',
+    'portfolio': './portfolio/wallet.htm',
+    'portfolio-award': './portfolio/awards.htm',
+    'portfolio-status': './portfolio/rank.htm',
+    'portfolio-preferences': './portfolio/wallet.htm',
     
     // Market section
     'market': './static/market/market.htm',
-    'market-settings': './static/market/issues.htm',
-    'market-security': './static/market/bugs.htm',
-    'market-preferences': './static/market/wanted.htm',
+    'market-settings': './market/issues.htm',
+    'market-security': './market/bugs.htm',
+    'market-preferences': './market/wanted.htm',
     
     // Work Tickets section
-    'tickets-active': './static/tickets/active.htm',
-    'tickets-completed': './static/tickets/completed.htm',
-    'tickets-create': './static/tickets/create.htm',
+    'tickets-active': './tickets/active.htm',
+    'tickets-completed': './tickets/completed.htm',
+    'tickets-create': './tickets/create.htm',
     
     // Settings section
-    'settings-general': './static/settings/general.htm',
-    'settings-alerts': './static/settings/alerts.htm',
-    'settings-privacy': './static/settings/privacy.htm'
+    'settings-general': './settings/general.htm',
+    'settings-alerts': './settings/alerts.htm',
+    'settings-privacy': './settings/privacy.htm'
     
 };
 
