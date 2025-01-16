@@ -148,7 +148,7 @@ export const initializeContentLoader = () => {
 
         .spinner {
             border: 4px solid #f3f3f3;
-            border-top: 4px solid #00ffff;
+            border-top: 4px solid #5e1300;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -170,7 +170,7 @@ export const initializeContentLoader = () => {
         .retry-button {
             margin-top: 1rem;
             padding: 0.5rem 1rem;
-            background-color: #00ffff;
+            background-color: #5e1300;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -178,7 +178,7 @@ export const initializeContentLoader = () => {
         }
         
         .retry-button:hover {
-            background-color: #00cccc;
+            background-color: #e0a800;
         }
     `;
     document.head.appendChild(style);

@@ -51,10 +51,10 @@ input:focus, textarea:focus {
 }
 
 input[type="submit"] {
-    background: #09daff;
+    background: #e0a800;
     color: #000;
-    border: 2px solid #09daff;
-    box-shadow: 0 0 10px #09daff, 0 0 20px #09daff;
+    border: 2px solid #e0a800;
+    box-shadow: 0 0 10px #e0a800, 0 0 20px #e0a800;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -87,12 +87,12 @@ input[type="submit"]:disabled {
     border: 2px solid #eeb64f;
     border-radius: 5px;
     background: transparent;
-    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+    box-shadow: 0 0 10px #e0a800, 0 0 20px #e0a800;
     transition: all 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-    background-color: #00d4ff; 
+    background-color: #e0a800; 
     color: #000; 
     transform: scale(1.1); 
     box-shadow: 0 0 15px #eeb64f, 0 0 30px #eeb64f;

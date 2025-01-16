@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const randomY = Math.random() * 4 - 2;
             element.style.textShadow = `
                 ${randomX}px ${randomY}px #ff00ff,
-                ${-randomX}px ${-randomY}px #00ffff`;
+                ${-randomX}px ${-randomY}px #5e1300`;
         }, 100);
     };
 
