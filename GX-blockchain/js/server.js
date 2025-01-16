@@ -36,7 +36,7 @@ app.post('/submit', limiter, async (req, res) => {
     });
 
     const mailOptions = {
-        from: `"Degen Vets Form" <${process.env.SMTP_USER}>`,
+        from: `"CryptoVersus Form" <${process.env.SMTP_USER}>`,
         to: process.env.RECEIVER_EMAIL, 
         subject: 'New Contact Form Submission',
         text: `
